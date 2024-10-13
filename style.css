@@ -5,25 +5,83 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: rgb(244, 240, 254);
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #f8f9fa; /* Light background */
 }
 
 header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
-  background-color: #1e1f21; /* Dark gray background */
-  color: #ffffff;
+  padding: 0 30px;
+  background: linear-gradient(90deg, #00c4cc, #7b61ff);
+  color: rgb(244, 240, 254);
+  box-shadow: 0px 4px 10px rgb(147, 147, 210);
+}
+
+header img {
+  height: 40px;
+  margin-right: 20px;
 }
 
 header h1 {
   font-size: 24px;
-  color: #0077cc; /* CSS-Tricks blue accent */
+  color: #f4f0fe;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: transparent;
+  margin: 20px auto;
+  max-width: 800px;
+  font-size: 20px;
+}
+
+.controls button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.869);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+}
+
+.controls button:hover {
+  background-color: rgba(255, 255, 255, 0.12); /* Darker teal on hover */
+}
+
+.controls label {
+  color: #333333;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.controls input[type="color"],
+.controls input[type="range"] {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.controls input[type="color"]:hover,
+.controls input[type="range"]:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .content {
@@ -31,11 +89,12 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff; /* Main background */
+  background-color: #f1f1f1; /* Light gray background */
 }
 
 canvas {
-  border: 2px solid #e7e7e7; /* Light border for the canvas */
+  border-radius: 10px; /* Soft rounded corners */
   background-color: #ffffff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for canvas */
+  box-shadow: 0px 6px 20px rgba(147, 147, 210, 0.52); /* Soft shadow for elevation */
+  padding: 10px;
 }
